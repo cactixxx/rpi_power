@@ -20,5 +20,5 @@ rm root
 echo " "
 echo " "
 echo "Installation Complete"
-echo "You can now shutdown the RPi and connect it to the RPi Power Manager 2
+echo "You can now shutdown the RPi and connect it to the RPi Power Manager 2"
 echo " "

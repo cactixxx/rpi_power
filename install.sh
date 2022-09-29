@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /opt
+sudo apt install git
 sudo git clone https://github.com/larsks/gpio-watch.git
 sudo chown $(whoami) /opt/gpio-watch 
 cd gpio-watch

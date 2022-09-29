@@ -7,7 +7,7 @@ echo "#!/bin/sh" > /etc/gpio-scripts/$OFF_BUTTON
 echo "echo \"Off button pressed\"" >> /etc/gpio-scripts/$OFF_BUTTON
 echo "date \"+%F %H:%M:%S - Off button triggered\" >> /var/log/rpi_power.log" >> /etc/gpio-scripts/$OFF_BUTTON
 echo "/usr/sbin/init 0" >> /etc/gpio-scripts/$OFF_BUTTON
-chmod 777 /etc/gpio-scripts/$iOFF_BUTTON
+chmod 777 /etc/gpio-scripts/$OFF_BUTTON
 
 echo "$LATCH_OUT" > /sys/class/gpio/export	#output
 echo "out" > /sys/class/gpio/gpio$LATCH_OUT/direction

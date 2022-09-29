@@ -6,6 +6,7 @@ sudo chown $(whoami) /opt/gpio-watch
 cd gpio-watch
 make
 sudo make install
+sudo mkdir /etc/gpio-scripts
 
 sudo mkdir /opt/rpi_power
 sudo chown $(whoami) /opt/rpi_power

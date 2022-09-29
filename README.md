@@ -16,7 +16,7 @@ Installation Instructions:
 7)  The Orange PWR LED should light up
 8)  Press the ON button.  The Green RELAY LED should light up
 9)  After a few second the Blue LATCH LED should light up
-10) To shutdown the Pi either execute a shutdown command from the console or press the OFF button. The Blue LATCH LED will switch off after a few seconds and the Green RELAY LED will shutdown according to the time delay selected via the soldered PADS.
+10) To shutdown the Pi either execute a shutdown command from the console or GUI or press the OFF button. The Blue LATCH LED will switch off after a few seconds and the Green RELAY LED will shutdown according to the time delay selected via the soldered PADS.
 
 
 

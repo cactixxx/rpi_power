@@ -12,6 +12,7 @@ sudo mkdir /etc/gpio-scripts
 
 sudo mkdir /opt/rpi_power
 sudo chown $(whoami) /opt/rpi_power
+cd /opt/rpi_power
 /usr/bin/wget https://raw.githubusercontent.com/cactixxx/rpi_power/main/rpi_power.sh
 sudo chmod 744 /opt/rpi_power/rpi_power.sh
 sudo chown root /opt/rpi_power/rpi_power.sh

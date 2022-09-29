@@ -17,3 +17,8 @@ crontab -l > root
 grep -qxF '@reboot /opt/rpi_power/rpi_power.sh' root || echo "@reboot /opt/rpi_power/rpi_power.sh" >> root
 sudo crontab root
 rm root
+echo " "
+echo " "
+echo "Installation Complete"
+echo "You can now shutdown the RPi and connect it to the RPi Power Manager 2
+echo " "

@@ -10,8 +10,8 @@ Installation Instructions:
         Pin             Pin
         5V  --------->  5V (Pin 2)
         GND --------->  Ground (Pin 6)
-        OFF --------->  GPIO20 (Pin 38)
-        LAT --------->  GPIO21 (Pin 40)
+        LAT --------->  GPIO20 (Pin 38)
+        OFF --------->  GPIO21 (Pin 40)
 6)  Connect power (USB-C) to the RPi Manager 2
 7)  The Orange PWR LED should light up
 8)  Press the ON button.  The Green RELAY LED should light up

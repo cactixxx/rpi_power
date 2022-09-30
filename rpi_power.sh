@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OFF_BUTTON=20
-LATCH_OUT=21
+LATCH_OUT=20
+OFF_BUTTON=21
 
 echo "#!/bin/sh" > /etc/gpio-scripts/$OFF_BUTTON
 echo "echo \"Off button pressed\"" >> /etc/gpio-scripts/$OFF_BUTTON

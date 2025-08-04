@@ -1,3 +1,8 @@
+Got it! Here's your original **installation instructions**, rewritten and formatted in **GitHub-friendly Markdown** with code blocks and clean tables — ideal for a `README.md`.
+
+---
+
+````markdown
 # 🧰 RPi Power Manager 2 – Installation Instructions
 
 > **⚠️ Important:** Do **NOT** connect the RPi Power Manager 2 before completing the following steps.
@@ -16,29 +21,80 @@ Open a terminal and run:
 
 ```bash
 wget -O - https://raw.githubusercontent.com/cactixxx/rpi_power/main/install.sh | /usr/bin/bash
+````
 
+---
 
-Installation Instructions:
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-1)  Boot the Pi using the normal power supply. Do not connect the RPi Power Manager 2 before completing the follwing steps!
-2)  Execute the follwing:
-        wget -O - https://raw.githubusercontent.com/cactixxx/rpi_power/main/install.sh | /usr/bin/bash
-3)  Shutdown the pi, by executing: init 0 or shutdown -h now
-4)  Disconnect the normal power supply
-5)  Connect as follows:
-        RPi Manager 2   Raspberry Pi
-        Pin             Pin
-        5V  --------->  5V (Pin 2)
-        GND --------->  Ground (Pin 6)
-        LAT --------->  GPIO20 (Pin 38)
-        OFF --------->  GPIO21 (Pin 40)
-6)  Connect power (USB-C) to the RPi Manager 2
-7)  The Orange PWR LED should light up
-8)  Press the ON button.  The Green RELAY LED should light up
-9)  After a few second the Blue LATCH LED should light up
-10) To shutdown the Pi either execute a shutdown command from the console or GUI or press the OFF button. The Blue LATCH LED will switch off after a few seconds and the Green RELAY LED will shutdown according to the time delay selected via the soldered PADS.
+## ⏹️ 3. Shutdown the Raspberry Pi
 
+Use either of the following commands:
 
+```bash
+init 0
+```
 
+or
 
+```bash
+shutdown -h now
+```
 
+---
+
+## 🔌 4. Disconnect Power
+
+Unplug the Pi’s regular power supply.
+
+---
+
+## ⚙️ 5. Connect RPi Power Manager 2 to GPIO
+
+Wire the following pins:
+
+| **RPi Manager 2 Pin** | **Raspberry Pi Pin** |
+| --------------------- | -------------------- |
+| `5V`                  | 5V (Pin 2)           |
+| `GND`                 | Ground (Pin 6)       |
+| `LAT`                 | GPIO20 (Pin 38)      |
+| `OFF`                 | GPIO21 (Pin 40)      |
+
+---
+
+## 🔌 6. Connect USB-C Power to the RPi Power Manager 2
+
+---
+
+## 💡 7. LED Status Indicators
+
+* 🔶 **Orange PWR LED** should light up
+* 🟢 Press the **ON button** → **Green RELAY LED** should light up
+* 🔵 After a few seconds, **Blue LATCH LED** should light up
+
+---
+
+## 📴 8. Shutting Down
+
+To safely power off the Raspberry Pi:
+
+* Run a shutdown command from the console or GUI:
+
+  ```bash
+  shutdown -h now
+  ```
+
+  *OR*
+* Press the **OFF button**
+
+Once shutdown:
+
+* 🔵 **Blue LATCH LED** will turn off
+* 🟢 **Green RELAY LED** will power down after a delay (set via soldered PADs)
+
+---
+
+✅ You're now up and running with RPi Power Manager 2!
+
+```
+
+Let me know if you'd like this as a downloadable `README.md` or if you'd like to embed images/wiring diagrams!
+```

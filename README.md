@@ -86,8 +86,3 @@ Once shutdown:
 ---
 
 ✅ You're now up and running with RPi Power Manager 2!
-
-```
-
-Let me know if you'd like this as a downloadable `README.md` or if you'd like to embed images/wiring diagrams!
-```

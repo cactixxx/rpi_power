@@ -16,7 +16,7 @@ Open a terminal and run:
 
 ```bash
 wget -O - https://raw.githubusercontent.com/cactixxx/rpi_power/main/install.sh | /usr/bin/bash
-
+```
 
 ## ⏹️ 3. Shutdown the Raspberry Pi
 

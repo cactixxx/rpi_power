@@ -1,3 +1,23 @@
+# 🧰 RPi Power Manager 2 – Installation Instructions
+
+> **⚠️ Important:** Do **NOT** connect the RPi Power Manager 2 before completing the following steps.
+
+---
+
+## 🔌 1. Boot Normally
+
+Power on the Raspberry Pi using the **standard power supply**.
+
+---
+
+## 📥 2. Install the Power Manager Script
+
+Open a terminal and run:
+
+```bash
+wget -O - https://raw.githubusercontent.com/cactixxx/rpi_power/main/install.sh | /usr/bin/bash
+
+
 Installation Instructions:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 1)  Boot the Pi using the normal power supply. Do not connect the RPi Power Manager 2 before completing the follwing steps!

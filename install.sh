@@ -1,27 +1,46 @@
 #!/bin/bash
 
-cd /opt
-sudo apt update
-sudo apt -y install git
-sudo git clone https://github.com/larsks/gpio-watch.git
-sudo chown $(whoami) /opt/gpio-watch 
-cd gpio-watch
-make
-sudo make install
-sudo mkdir /etc/gpio-scripts
+set -e  # Stop on first error
+set -u  # Error on undefined variables
 
-sudo mkdir /opt/rpi_power
-sudo chown $(whoami) /opt/rpi_power
-cd /opt/rpi_power
-/usr/bin/wget https://raw.githubusercontent.com/cactixxx/rpi_power/main/rpi_power.sh
-sudo chmod 744 /opt/rpi_power/rpi_power.sh
-sudo chown root /opt/rpi_power/rpi_power.sh
-sudo crontab -l > root
-grep -qxF '@reboot /opt/rpi_power/rpi_power.sh' root || echo "@reboot /opt/rpi_power/rpi_power.sh" >> root
-sudo crontab root
-rm root
-echo " "
-echo " "
-echo "Installation Complete"
+echo "🔧 Installing RPi Power Manager 2 dependencies..."
+
+# Make sure the script is run as root
+if [ "$EUID" -ne 0 ]; then
+  echo "❌ Please run as root (e.g., sudo $0)"
+  exit 1
+fi
+
+# Variables
+INSTALL_DIR="/opt/rpi_power"
+SCRIPT_URL="https://raw.githubusercontent.com/cactixxx/rpi_power/main/rpi_power.sh"
+CRON_LINE="@reboot /opt/rpi_power/rpi_power.sh"
+
+# Update and install required packages
+apt update
+apt -y install git make wget gpiod
+
+# Create directory for script
+mkdir -p "$INSTALL_DIR"
+cd "$INSTALL_DIR"
+
+# Download the power script
+wget -O rpi_power.sh "$SCRIPT_URL"
+chmod 744 rpi_power.sh
+chown root:root rpi_power.sh
+
+# Create /etc/gpio-scripts directory
+mkdir -p /etc/gpio-scripts
+
+# Install cron job (if not already present)
+CRON_TMP=$(mktemp)
+crontab -l > "$CRON_TMP" 2>/dev/null || true
+grep -qxF "$CRON_LINE" "$CRON_TMP" || echo "$CRON_LINE" >> "$CRON_TMP"
+crontab "$CRON_TMP"
+rm "$CRON_TMP"
+
+# Done
+echo
+echo "✅ Installation Complete"
 echo "You can now shutdown the RPi and connect it to the RPi Power Manager 2"
-echo " "
+echo

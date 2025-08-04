@@ -1,8 +1,3 @@
-Got it! Here's your original **installation instructions**, rewritten and formatted in **GitHub-friendly Markdown** with code blocks and clean tables — ideal for a `README.md`.
-
----
-
-````markdown
 # 🧰 RPi Power Manager 2 – Installation Instructions
 
 > **⚠️ Important:** Do **NOT** connect the RPi Power Manager 2 before completing the following steps.
@@ -21,9 +16,7 @@ Open a terminal and run:
 
 ```bash
 wget -O - https://raw.githubusercontent.com/cactixxx/rpi_power/main/install.sh | /usr/bin/bash
-````
 
----
 
 ## ⏹️ 3. Shutdown the Raspberry Pi
 

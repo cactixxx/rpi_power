@@ -18,7 +18,7 @@ CRON_LINE="@reboot /opt/rpi_power/rpi_power.sh"
 
 # Update and install required packages
 apt update
-apt -y install wget gpiod
+apt -y install gpiod
 
 # Create directory for script
 mkdir -p "$INSTALL_DIR"

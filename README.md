@@ -1,5 +1,7 @@
 # 🧰 RPi Power Manager 2 – Installation Instructions
 
+![RPi Power 2](image.png)
+
 > **⚠️ Important:** Do **NOT** connect the RPi Power Manager 2 before completing the following steps.
 
 ---
